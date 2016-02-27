@@ -17,9 +17,9 @@ var MasterTranslator = function(originalMasterTranslator) {
   var translatedSentence;
   var resultArea;
 
-  originalMasterTranslator.translateToFrench = function(capUserInput){
+  originalMasterTranslator.translateToFrench = function(userInput){
 
-    var userArray = capUserInput.split(" ");
+    var userArray = userInput.toUpperCase().split(" ");
 
     userArray[userArray.indexOf("MERRY")] = frenchLexicon["merry"];
     userArray[userArray.indexOf("CHRISTMAS")] = frenchLexicon["christmas"];
