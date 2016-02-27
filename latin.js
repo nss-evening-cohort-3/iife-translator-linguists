@@ -36,7 +36,7 @@
 //should be called.
 
 var MasterTranslator = function(english) {
-    var wordsLatin = {
+  var wordsLatin = {
    	"merry": "felicem",
    	"christmas": "natalem christi",
    	"and": "et",
@@ -44,7 +44,7 @@ var MasterTranslator = function(english) {
    	"new": "novus",
    	"year": "anni",
     "monkeybutt": "simia dolium"
-   }
+  }
   english.translateToLatin = function(englishInput) {
     //make input lowercase
     var latinTranslation = englishInput.toLowerCase();
