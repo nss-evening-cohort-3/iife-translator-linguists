@@ -4,17 +4,21 @@ document.getElementById("translate-button").addEventListener("click", translateT
 // Uses the select box to call the correct language function from other JS page.
 function translateText() {
   
+  var capUserInput= document.getElementById("input-field").value.toUpperCase();
   var selectBox = document.getElementById("selected-language");
 
   if (selectBox.value === "french"){
-    MasterTranslator.translateToFrench();
+    translatedSentence = MasterTranslator.translateToFrench(capUserInput);
   }
 
   else if (selectBox.value === "spanish"){
-    MasterTranslator.translateToSpanish();
+    translatedSentence = MasterTranslator.translateToSpanish(capUserInput);
 
   }
   else if (selectBox.value === "latin"){
-    MasterTranslator.translateToLatin();
+    translatedSentence = MasterTranslator.translateToLatin(capUserInput);
   }
+
+    var resultArea = document.getElementById("translate-text");
+    resultArea.innerHTML = translatedSentence;
 };
