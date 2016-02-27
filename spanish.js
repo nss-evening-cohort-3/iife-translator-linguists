@@ -67,7 +67,7 @@ var MasterTranslator = function(originalMasterTranslator) {
     var spanishString = checkAndReplaceEnglishArray(englishArrayToBeTranslated);
     
     // Output new array to div DOM element.
-    console.log(spanishString);
+    return spanishString;
 
   }
 
