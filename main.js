@@ -6,6 +6,8 @@ function translateText() {
   
   var userInput= document.getElementById("input-field").value;
   var selectBox = document.getElementById("selected-language");
+  var resultArea = document.getElementById("translate-text");
+  var textToSpeechChecked = document.getElementById("say-words").checked;
 
   if (selectBox.value === "french"){
     translatedSentence = MasterTranslator.translateToFrench(userInput);
@@ -17,14 +19,14 @@ function translateText() {
   }
   else if (selectBox.value === "latin"){
     translatedSentence = MasterTranslator.translateToLatin(userInput);
-  }
+  };
 
-    var resultArea = document.getElementById("translate-text");
-    
     resultArea.innerHTML = translatedSentence;
 
+  if (textToSpeechChecked) {
     sayText(translatedSentence);
-};
+  };
+}
 
 function sayText(textToBeSpoken){
   var msg = new SpeechSynthesisUtterance(textToBeSpoken);
