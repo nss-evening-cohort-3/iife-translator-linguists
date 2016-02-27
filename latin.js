@@ -35,35 +35,32 @@
 //interacting with the form elements and determining which method 
 //should be called.
 
-var MasterTranslator = function(newLatin) {
+var MasterTranslator = function(english) {
     var wordsLatin = {
    	"merry": "felicem",
    	"christmas": "natalem christi",
    	"and": "et",
    	"happy": "beatum",
    	"new": "novus",
-   	"year": "anni"
+   	"year": "anni",
+    "monkeybutt": "simia dolium"
    }
-  newLatin.translateToLatin = function(englishInput) {
-      var latinTranslation = englishInput.toLowerCase();
+  english.translateToLatin = function(englishInput) {
+    //make input lowercase
+    var latinTranslation = englishInput.toLowerCase();
       //search object for English word key       
-      Object.keys(wordsLatin).forEach( function(originalWord) {    
+    Object.keys(wordsLatin).forEach( function(originalWord) {    
       //for keys that are strings, cannot use dot notation, 
       //must use []s
       latinTranslation = latinTranslation.replace(originalWord, wordsLatin[originalWord]);
       });
-      console.log("latinTranslation", latinTranslation );
       //return entire Latin translation
     return latinTranslation;
   }
   //this provides the list of translatable words
-  newLatin.getLatinLexicon = function () {
+  english.getLatinLexicon = function () {
     return wordsLatin;
   }
-  return newLatin;
+  return english;
 //adds Latin translator unless the French or Spanish translator is available firt
 }(MasterTranslator || {});
-
-
-
-
