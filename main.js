@@ -20,5 +20,14 @@ function translateText() {
   }
 
     var resultArea = document.getElementById("translate-text");
+    
     resultArea.innerHTML = translatedSentence;
+
+    sayText(translatedSentence);
 };
+
+function sayText(textToBeSpoken){
+  var msg = new SpeechSynthesisUtterance(textToBeSpoken);
+  msg.voice = speechSynthesis.getVoices().filter(function(voice) { return voice.name == 'Whisper'; })[0];
+  speechSynthesis.speak(msg);
+}

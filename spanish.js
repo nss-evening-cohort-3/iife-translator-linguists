@@ -9,6 +9,7 @@ var MasterTranslator = function(originalMasterTranslator) {
     "happy": "próspero",
     "new": "nuevo",
     "year": "año",
+    "monkeybutt": "monoextremo"
   }
 
 // Simply takes the english string passed from the DOM and builds an Array out of it. 
