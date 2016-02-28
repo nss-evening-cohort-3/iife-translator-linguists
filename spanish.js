@@ -46,8 +46,8 @@ var MasterTranslator = function(originalMasterTranslator) {
           } else if (englishWord[0].includes(key[0].toUpperCase())) {
             translatedSpanishArray.push(translateFirstCharUpperCase(englishWord, key, spanishLexicon[key]));
             break;
-          } else if (englishWord.includes(key)) {
-            translatedSpanishArray.push(englishWord.replace(key, spanishLexicon[key]));
+          } else if (englishWord.toLowerCase().includes(key)) {
+            translatedSpanishArray.push(englishWord.toLowerCase().replace(key, spanishLexicon[key]));
             break;
           };
         } else if (xCounter === (Object.keys(spanishLexicon).length - 1)) {
