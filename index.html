@@ -3,12 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <title>Language Translator</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <link href='https://fonts.googleapis.com/css?family=Mountains+of+Christmas:400,700' rel='stylesheet' type='text/css'>
 </head>
 <body>
-  
+  <div id="snow">
   <h1>NSS Language Translator</h1>
+  <div class="box">
   <textarea id="input-field" placeholder="Enter your text to be translated"></textarea><br/>
-  
+  </div>
+  <div class="buttons">
   <select id="selected-language">
     <option value="french">French</option>
     <option value="spanish">Spanish</option>
@@ -17,12 +21,13 @@
 
   <button id="translate-button">Translate</button>
   <label><input type="checkbox" id="say-words" value="say-words-checkbox">Text to Speech?</label>
-
+  </div>
   <div id="translate-text">Translated Text Will Appear Here</div>
 
   <script type="text/javascript" src="main.js"></script>
   <script type="text/javascript" src="french.js"></script>
   <script type="text/javascript" src="spanish.js"></script>
   <script type="text/javascript" src="latin.js"></script>
+  </div>
 </body>
 </html>
