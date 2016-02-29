@@ -1,19 +1,73 @@
+/* Page Heading */
+h1 {
+  font-family: 'Mountains of Christmas', cursive;
+  text-align: center;
+  font-size: 4em;
+  color: #E81C26;
+  text-shadow: 2px 2px 2px rgba(4, 114, 8, 1);
+}
+
+/* Textarea and it's container */
+.box {
+  text-align: center;
+}
 textarea {
   width: 600px;
   height: 120px;
-  border: 3px solid green;
+  border: 4px inset rgb(4, 114, 8);
   padding: 5px;
-  font-family: Tahoma, sans-serif;
+  font-family: 'Mountains of Christmas', cursive;
+  font-size: 1.5em;
+  text-align: center;
   background-position: bottom right;
   background-repeat: no-repeat;
 }
 
-button {
-  padding: 5px;
+/* Buttons and their container */
+.buttons {
+  text-align: center;
+}
+select {
+  margin-right: 1.5em;
+}
+button, select {
+  padding: .25em 1em;
   border: 1px solid red;
   border-radius: 5px;
   text-align: center;
   color: white;
+  font-size: 1.5em;
+  font-family: 'Mountains of Christmas', cursive;
   text-decoration:none;
   background: green;
+}
+
+/* Translation */
+#translate-text {
+  text-align: center;
+  margin-top: 1.5em;
+  font-family: 'Mountains of Christmas', cursive;
+  font-size: 2em;
+  color: #E81C26;
+  text-shadow: 2px 2px 2px rgba(4, 114, 8, 1);
+}
+
+/* Hells yeah, it's snowing on this page */
+body { background-color:#A0B8FA; }
+#snow{
+  background: none;
+  font-family: Androgyne;
+  background-image: url('http://www.wearewebstars.dk/codepen/img/s1.png'), url('http://www.wearewebstars.dk/codepen/img//s2.png'), url('http://www.wearewebstars.dk/codepen/img//s3.png');
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index:1;
+  animation: snow 10s linear infinite;
+}
+@keyframes snow {
+  0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
+  50% {background-position: 500px 500px, 100px 200px, -100px 150px;}
+  100% {background-position: 500px 1000px, 200px 400px, -100px 300px;}
 }
