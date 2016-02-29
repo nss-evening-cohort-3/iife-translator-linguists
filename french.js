@@ -8,6 +8,7 @@ var MasterTranslator = function(originalMasterTranslator) {
     "happy": "bonne",
     "new": "nouvelle",
     "year": "année",
+    "monkeybutt": "derrière du singe"
     };
 
   originalMasterTranslator.getFrenchLexicon = function() {
@@ -19,6 +20,10 @@ var MasterTranslator = function(originalMasterTranslator) {
 
   originalMasterTranslator.translateToFrench = function(userInput){
 
+    var userArray = userInput.split(" ");
+
+  originalMasterTranslator.translateToFrench = function(userInput){
+
     var userArray = userInput.toUpperCase().split(" ");
 
     userArray[userArray.indexOf("MERRY")] = frenchLexicon["merry"];
@@ -27,6 +32,7 @@ var MasterTranslator = function(originalMasterTranslator) {
     userArray[userArray.indexOf("HAPPY")] = frenchLexicon["happy"];
     userArray[userArray.indexOf("NEW")] = frenchLexicon["new"];
     userArray[userArray.indexOf("YEAR")] = frenchLexicon["year"];
+    userArray[userArray.indexOf("MONKEYBUTT")] = frenchLexicon["monkeybutt"];
 
     translatedSentence = userArray.reduce(function(previous, current) {
       return previous + " " + current;
