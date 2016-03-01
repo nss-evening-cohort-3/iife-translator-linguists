@@ -1,7 +1,7 @@
 
 var MasterTranslator = function(originalMasterTranslator) {
 
-  var translatedSentence = [];
+
   var resultArea;
 
   var frenchLexicon = {
@@ -20,6 +20,7 @@ var MasterTranslator = function(originalMasterTranslator) {
 
   originalMasterTranslator.translateToFrench = function(userInput) {
 
+    var translatedSentence = [];
     var userArray = userInput.toLowerCase().split(" ");
 
     userArray.forEach(function(word) {
